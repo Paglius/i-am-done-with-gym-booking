@@ -1,3 +1,16 @@
-<p>
-  login works!
-</p>
+<ion-content class="loginPage">
+  <div class="loginLogo">
+    <img src="../../../resources/logo/logo1.png" alt="megatlonLogo"/>
+  </div>
+  <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="login()">
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input id="emailLoginInput" formControlName="email" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input id="passwordLoginInput" formControlName="password" ></ion-input>
+    </ion-item>
+    <ion-button id="submitLoginButton" color="primary" type="submit">Login</ion-button>
+  </form>
+</ion-content>
